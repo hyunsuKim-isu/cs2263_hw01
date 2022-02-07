@@ -24,8 +24,11 @@ public interface Interfaces {
 
     };
 
+    /**
+     * inputNumCli is value from text file. It split base on "\n" .
+     * @param value contents from text file.
+     */
     static void inputNumCli(String value){
-        int count = 1;
         String[] newVal = value.split(System.lineSeparator());
         for(int i = 0; i < newVal.length; i++){
             String valueString = newVal[i].replace("\n", "");
@@ -37,7 +40,7 @@ public interface Interfaces {
     };
 
     /**
-     * @param output Value obtained by calculating the input value.
+     * @param output Value obtained by calculating the input value and original formula.
      */
     static void outputNum(String formula , String output){
 

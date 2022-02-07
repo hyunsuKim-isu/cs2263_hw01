@@ -10,14 +10,13 @@ public class Evaluator implements Interfaces {
 
     private static String[] operationType = {"+", "-", "*", "/"};
 
-    public static int Evaluator(String formula){
-        int result = calculate(formula);
-        outputNum(formula ,Integer.toString(result));
+    public static float Evaluator(String formula){
+        float result = calculate(formula);
+        outputNum(formula ,Float.toString(result));
         return result;
     }
 
     public static void outputNum(String formula ,String output){
-
         System.out.println("formula is = " + formula + "\n" + "Answer is = " + output);
     }
 
@@ -26,9 +25,9 @@ public class Evaluator implements Interfaces {
      * @param formula The formula from input interface and which is string
      * @return Result representing the value of calculated formula
      */
-    public static int calculate(String formula){
+    public static float calculate(String formula){
         String[] input = formula.split(" ");
-        int result = Integer.parseInt(input[0]);
+        float result = Integer.parseInt(input[0]);
         String operator = null;
 
         for(int i = 1; i < input.length; i++){
@@ -62,7 +61,7 @@ public class Evaluator implements Interfaces {
      * @return  The result value calculated according to the operator
      * @throws IllegalArgumentException if operator entered it is not the defined operation type
      */
-    public static int partCalculate(String operator, int result, String input){
+    public static float partCalculate(String operator, float result, String input){
 
         if(input == null || input.equals("")) throw new IllegalArgumentException();
 
@@ -87,7 +86,7 @@ public class Evaluator implements Interfaces {
      * @param input second value from input which is formula
      * @return result to given formula
      */
-    public static int plus(int result, String input){
+    public static float plus(float result, String input){
         return result + Integer.parseInt(input);
     }
 
@@ -96,7 +95,7 @@ public class Evaluator implements Interfaces {
      * @param input second value from input which is formula
      * @return result to given formula
      */
-    public static int minus(int result, String input){
+    public static float minus(float result, String input){
         return result - Integer.parseInt(input);
     }
 
@@ -105,7 +104,7 @@ public class Evaluator implements Interfaces {
      * @param input second value from input which is formula
      * @return result to given formula
      */
-    public static int multiply(int result, String input){
+    public static float multiply(float result, String input){
         return result * Integer.parseInt(input);
     }
 
@@ -114,7 +113,7 @@ public class Evaluator implements Interfaces {
      * @param input second value from input which is formula
      * @return result to given formula
      */
-    public static int division(int result, String input){
+    public static float division(float result, String input){
         return result / Integer.parseInt(input);
     }
 

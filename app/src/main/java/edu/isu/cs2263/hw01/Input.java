@@ -1,9 +1,5 @@
 package edu.isu.cs2263.hw01;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-
 public class Input {
     public static void main(String args) {
 
